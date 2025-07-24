@@ -1,0 +1,4 @@
+tasks:
+    - name: run back-end
+      openMode: split-right
+      command: bash startup.sh
