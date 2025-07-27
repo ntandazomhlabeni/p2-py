@@ -24,7 +24,7 @@ COPY . .
 
 RUN chmod +x startup.sh
 
-RUN chmod +x test.sh
+RUN chmod +x work.sh
 
 ENV PORT 10000
 
