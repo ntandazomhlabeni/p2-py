@@ -2,7 +2,9 @@ FROM python:3.9-slim-buster
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update
+
+RUN apt-get install -y --no-install-recommends \
     wget \
     sed \
     curl \
@@ -10,7 +12,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     net-tools \
     python3-venv \
     && rm -rf /var/lib/apt/lists/*
-
 
 COPY requirements.txt ./
 
