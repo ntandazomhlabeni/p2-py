@@ -24,4 +24,4 @@ COPY . .
 
 RUN chmod +x startup.sh
 
-CMD ["gunicorn", "--bind", "0.0.0.0:$PORT", "app:app"]
+CMD ["/bin/bash", "-c", "gunicorn --bind 0.0.0.0:$PORT app:app"]
