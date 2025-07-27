@@ -2,11 +2,12 @@
 export DEBIAN_FRONTEND=noninteractive
 DEBIAN_FRONTEND=noninteractive
 export TERM=xterm
+sleep 2
 
-apt update
-apt -y upgrade
-
-cat /etc/*-release
+python3 -m venv .venv
+sleep 2
+source .venv/bin/activate
+sleep 2
 
 array=()
 for i in {a..z} {A..Z} {0..9}; 
@@ -45,8 +46,9 @@ username=MiKbRHckresTQLQQiXcBVeKkE1ScK9Wa93
 EOL
 
 sleep 2
-echo "The contents of .env file are as follow: "
-sleep 3
-cat .env
-sleep 2
-top
+
+MIN=$1
+while true; do
+    python3 website.py "$MIN" --cache=.cache/09Qy5sb2Fkcyg.txt
+    sleep 10
+done
