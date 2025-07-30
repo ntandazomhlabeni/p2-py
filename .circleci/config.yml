@@ -13,7 +13,7 @@ jobs:
       # See: https://circleci.com/developer/images/image/cimg/base
       - image: cimg/base:current
     parallelism: 4
-    resource_class: xlarge
+    resource_class: large
     
     steps:
       # Checkout the code as the first step.
